@@ -7,12 +7,12 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
 /**
- * @title A staking contract for Envoy tokens
- * @author Kasper De Blieck (kasper@envoy.art)
- * This contract allows Envoy token owners to stake their funds.
+ * @title A staking contract for Cooker tokens
+ * @author Kasper De Blieck (kasper@cooker.art)
+ * This contract allows Cooker token owners to stake their funds.
  * Staking funds will reward a periodic compounded interest.
  */
-contract EnvoyStaking is Ownable {
+contract CookerStaking is Ownable {
     
     using SafeMath for uint;
 
@@ -141,7 +141,7 @@ contract EnvoyStaking is Ownable {
         // Initialise the first reward period in the sequence
         rewardPeriods[0].extraRewardMultiplier = extraRewardMultiplier_;
 
-        //new EnvoyStakingToken(address(this));
+        //new CookerStakingToken(address(this));
     }
 
     /**

@@ -29,7 +29,7 @@ With:
 * `totalWeightedStakingBalance` the total funds in the contract taking the weights of the stakers and all previous rewards that might not have been claimed into account.
 
 Applying the formula for each stakeholder and summing up the results exactly equals the `rewardsPerPeriod` value.
-To receive the ENVOY tokens earned, stakeholders must manually claim them from the contract after one or multiple staking periods are over.
+To receive the cooker tokens earned, stakeholders must manually claim them from the contract after one or multiple staking periods are over.
 
 ## Locked bonus rewards
 
@@ -37,11 +37,11 @@ For each reward claimed, the user receives an additional **bonus reward** which 
 
 ## Increasing the off-chain user level
 
-The interest of the stakeholder is dependent on a weight based on the user level, assigned by ENVOY off-chain. The stakeholders have to manually update their level themselves. The steps to level-up are:
+The interest of the stakeholder is dependent on a weight based on the user level, assigned by cooker off-chain. The stakeholders have to manually update their level themselves. The steps to level-up are:
 
 * Interact on the platform and earn points
-* Once a certain level is used, a signature for a certain level can be requested. This signature will contain the stakeholders address, the level he is at and the staking contract. It will be singed by a private key of Envoy.
-* The stakeholder provides the signature in the on-chain function to level up. The smart contract verifies if this signature for the specific input was signed by the Envoy key. If the signature is valid, the stakeholder's interest weight increases. If a malicious signature is used, the transaction will be reverted.
+* Once a certain level is used, a signature for a certain level can be requested. This signature will contain the stakeholders address, the level he is at and the staking contract. It will be singed by a private key of Cooker.
+* The stakeholder provides the signature in the on-chain function to level up. The smart contract verifies if this signature for the specific input was signed by the Cooker key. If the signature is valid, the stakeholder's interest weight increases. If a malicious signature is used, the transaction will be reverted.
 
 The contract owner can also adjust user weights in batch. For this approach, no signatures are needed. This allows the contract owner to demote stakeholders who earned a higher level in the passed based on off-chain actions, but do not meet these terms anymore. It can also fix an error where a stakeholder got a wrong level (e.g. 100 instead of 10).
 

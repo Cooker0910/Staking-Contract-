@@ -1,5 +1,5 @@
 
-const EnvoyStaking = artifacts.require("EnvoyStaking");
+const CookerStaking = artifacts.require("CookerStaking");
 const TestToken = artifacts.require("TestToken");
 
 const truffleAssert = require('truffle-assertions');
@@ -54,7 +54,7 @@ contract("Withdrawing funds", function(accounts) {
 
         // Make sure contracts are deployed
         token = await TestToken.new();
-        contract = await EnvoyStaking.new(maxNumberOfPeriods_ = web3.utils.toBN(1095),
+        contract = await CookerStaking.new(maxNumberOfPeriods_ = web3.utils.toBN(1095),
             rewardPeriodDuration_ = web3.utils.toBN(86400),
             periodsForExtraReward_ = 182,
             extraRewardMultiplier_ = 10**6,

@@ -1,8 +1,8 @@
 
 require('dotenv').config({path: '../.env'})
-const EnvoyStaking = artifacts.require("EnvoyStaking");
-const EnvoyStakingERC20 = artifacts.require("EnvoyStakingERC20");
-const EnvoyStakingKeepersInterface = artifacts.require("EnvoyStakingKeepersInterface");
+const CookerStaking = artifacts.require("CookerStaking");
+const CookerStakingERC20 = artifacts.require("CookerStakingERC20");
+const CookerStakingKeepersInterface = artifacts.require("CookerStakingKeepersInterface");
 const TestToken = artifacts.require("TestToken");
 
 module.exports = async function (deployer, network, accounts) {
@@ -19,7 +19,7 @@ module.exports = async function (deployer, network, accounts) {
     var token = await TestToken.deployed()
     tokenAddress = token.address
   }
-  await deployer.deploy(EnvoyStaking,
+  await deployer.deploy(CookerStaking,
                         maxNumberOfPeriods_ = web3.utils.toBN(43800),//(1825),
                         rewardPeriodDuration_ = web3.utils.toBN(600),//(86400),
                         periodsForExtraReward = web3.utils.toBN(120),
@@ -31,9 +31,9 @@ module.exports = async function (deployer, network, accounts) {
                         signatureAddress,
                         tokenAddress);    
 
-  const stakingContract = await EnvoyStaking.deployed()
-  await deployer.deploy(EnvoyStakingERC20, stakingContract.address)
-  await deployer.deploy(EnvoyStakingKeepersInterface, stakingContract.address)
+  const stakingContract = await CookerStaking.deployed()
+  await deployer.deploy(CookerStakingERC20, stakingContract.address)
+  await deployer.deploy(CookerStakingKeepersInterface, stakingContract.address)
 
   if(network != 'mainnet'){
     var token = await TestToken.at(tokenAddress)

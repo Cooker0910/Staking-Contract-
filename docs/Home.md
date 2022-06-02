@@ -1,8 +1,8 @@
-# Envoy staking contract
+# Cooker staking contract
 
 ## Aim of this repository
 
-This repository contains the source code for the staking contract created for the Envoy token. Users can stake their token to receive a periodic interest reward on their investment. The duration of the reward periods is fixed global variable and cannot be altered. It is the same for all stakeholder. At the end of each period, a reward is distributed between all the shareholders with a stake. The reward will be based on the total funds available in the contract that are not yet distributed. The share they receive depends on following parameters:
+This repository contains the source code for the staking contract created for the Cooker token. Users can stake their token to receive a periodic interest reward on their investment. The duration of the reward periods is fixed global variable and cannot be altered. It is the same for all stakeholder. At the end of each period, a reward is distributed between all the shareholders with a stake. The reward will be based on the total funds available in the contract that are not yet distributed. The share they receive depends on following parameters:
 
 * The **token amount** staked by each individual stakeholder
 * The **time** staked by the stakeholder, as rewards do compound. Rewards of previous periods are automatically added to the users staking balance.
@@ -12,7 +12,7 @@ For each reward period, a bonus is paid. The bonus will result in additional tok
 
 ## Deployed contracts
 
-Here, you can find a list with contracts deployed by Envoy:
+Here, you can find a list with contracts deployed by Cooker:
 
 | Network | Token address | Staking address | Date | Version |
 |-|-|-|-|-|
@@ -46,10 +46,10 @@ If you want to integrate with the contract, the API of the smart contract can be
 
 * [API][api]
 
-[wiki]: https://github.com/envoynetwork/staking-contract-v2/wiki/home
-[api]: https://github.com/envoynetwork/staking-contract-v2/wiki/API
-[contractlogic]: https://github.com/envoynetwork/staking-contract-v2/wiki/contract-implementation
-[example]: https://github.com/envoynetwork/staking-contract-v2/wiki/Example
-[stakinglogic]: https://github.com/envoynetwork/staking-contract-v2/wiki/Staking-Logic
-[demo]: https://github.com/envoynetwork/staking-contract-v2/wiki/Demo
-[coverage]: https://htmlpreview.github.io/?https://github.com/envoynetwork/staking-contract-v2/blob/master/docs/test_coverage/index.html
+[wiki]: https://github.com/cooker0910/Staking-Contract/wiki/home
+[api]: https://github.com/cooker0910/Staking-Contract/wiki/API
+[contractlogic]: https://github.com/cooker0910/Staking-Contract/wiki/contract-implementation
+[example]: https://github.com/cooker0910/Staking-Contract/wiki/Example
+[stakinglogic]: https://github.com/cooker0910/Staking-Contract/wiki/Staking-Logic
+[demo]: https://github.com/cooker0910/Staking-Contract/wiki/Demo
+[coverage]: https://htmlpreview.github.io/?https://github.com/cooker0910/Staking-Contract/blob/master/docs/test_coverage/index.html

@@ -135,9 +135,9 @@ class UserProperties extends Component{
                 <ul>
                     <li>Remaining token balance outside the contract: {state.tokenProperties.balance}</li>
                     <li>Remaining token balance that is approved for staking: {state.tokenProperties.approved}</li>
-                    <li>Staked balance: {state.userProperties.stakingBalance} ENVOY</li>
+                    <li>Staked balance: {state.userProperties.stakingBalance} cooker</li>
                     <li>Interest for the user (base interest + extra interest x weight): {(parseInt(state.contractProperties.baseInterest)+parseInt(state.contractProperties.extraInterest)*parseInt(state.userProperties.weight))/state.contractProperties.interestDecimals*100}%</li>
-                    <li>Rewards to be claimed: {state.userProperties.rewardsToClaim} ENVOY</li>                 
+                    <li>Rewards to be claimed: {state.userProperties.rewardsToClaim} cooker</li>                 
                     <li>User level: {state.userProperties.weight}</li>                   
                     <li>Start date of staking (UNIX): {state.userProperties.startDate}</li> 
                     <li>Date of last reward (UNIX): {state.userProperties.startDate}</li>

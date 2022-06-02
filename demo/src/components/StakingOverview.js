@@ -80,13 +80,13 @@ class StakingOverview extends Component{
         return (
         <div>
             <div className='Title'>
-                Envoy staking contract overview
+                Cooker staking contract overview
             </div>
             <div className='Subtitle'>
                 Info
             </div>
             <div>
-                This contract will be used to reward Envoy stakers with staking rewards. The source code can be found on: <a href="url">https://github.com/envoynetwork/staking-contract</a>
+                This contract will be used to reward Cooker stakers with staking rewards. The source code can be found on: <a href="url">https://github.com/cookernetwork/staking-contract</a>
                 <ul>
                     <li>Testing contract with address '{this.props.contractAddress}' on network {getConnectedNetwork(state.connectedNetwork)}</li>
                     <li>The contract address of the staking token is '{this.props.tokenAddress}' on network {getConnectedNetwork(state.connectedNetwork)}</li>
@@ -115,9 +115,9 @@ class StakingOverview extends Component{
             </div>
             <div>
                 <ul>
-                    <li>Staked balance: {state.userProperties.stakingBalance} ENVOY</li>
+                    <li>Staked balance: {state.userProperties.stakingBalance} cooker</li>
                     <li>Interest for the user (base interest + extra interest x weight): {(parseInt(state.contractProperties.baseInterest)+parseInt(state.contractProperties.extraInterest)*parseInt(state.userProperties.weight))/state.contractProperties.interestDecimals*100}%</li>
-                    <li>Rewards to be claimed: {state.userProperties.rewardsToClaim} ENVOY</li>                 
+                    <li>Rewards to be claimed: {state.userProperties.rewardsToClaim} cooker</li>                 
                     <li>User level: {state.userProperties.weight}</li>                   
                     <li>Start date of staking (UNIX): {state.userProperties.startDate}</li> 
                     <li>Date of last reward (UNIX): {state.userProperties.startDate}</li>

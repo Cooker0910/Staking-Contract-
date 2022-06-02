@@ -2,21 +2,21 @@
 //SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import "./EnvoyStaking.sol";
+import "./CookerStaking.sol";
 
 /**
- * Partial ERC20 compatible contract to fetch funds staked in an EnvoyStaking contract
+ * Partial ERC20 compatible contract to fetch funds staked in an CookerStaking contract
  */
-contract EnvoyStakingERC20 {
+contract CookerStakingERC20 {
 
     string public name = "Staked ENV"; 
     string public symbol = "sENV";
     uint public decimals = 18;
 
-    EnvoyStaking stakingContract;
+    CookerStaking stakingContract;
 
     constructor(address stakingContractAddress){
-        stakingContract = EnvoyStaking(stakingContractAddress);
+        stakingContract = CookerStaking(stakingContractAddress);
     }
 
     /**
@@ -26,7 +26,7 @@ contract EnvoyStakingERC20 {
      * @return balance the sum of total stakingbalance, reward and locked tokens
      */
     function balanceOf(address stakeholderAddress) public view returns (uint256 balance){
-            (uint reward,, EnvoyStaking.StakeHolder memory stakeholder) = stakingContract.calculateRewards(stakeholderAddress,
+            (uint reward,, CookerStaking.StakeHolder memory stakeholder) = stakingContract.calculateRewards(stakeholderAddress,
                                                          stakingContract.currentPeriod());
 
             balance = stakeholder.stakingBalance

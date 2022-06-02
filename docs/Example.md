@@ -1,5 +1,5 @@
 An diagram with an example of the staking contract can be found in this link
-[link](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Staking#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fenvoynetwork%2Fstaking-contract-v2%2Fmain%2Fdocs%2FStaking). It is advised to read the documentation with the diagram as guideline. In the example, there are 4 stakers. In reality, there are probably more. The reward per period is set to 30 for example purpose.
+[link](https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Staking#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fcookernetwork%2Fstaking-contract-v2%2Fmain%2Fdocs%2FStaking). It is advised to read the documentation with the diagram as guideline. In the example, there are 4 stakers. In reality, there are probably more. The reward per period is set to 30 for example purpose.
 
 # Period 1
 

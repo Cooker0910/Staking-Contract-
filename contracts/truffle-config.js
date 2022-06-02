@@ -1,5 +1,5 @@
 /**
- * Envoy staking deployment config
+ * Cooker staking deployment config
  */
 
 // MAKE SURE ALL NECESSARY VARIABLES ARE DEFINED IN .ENV

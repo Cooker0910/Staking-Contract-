@@ -1,6 +1,6 @@
 
-const EnvoyStaking = artifacts.require("EnvoyStaking");
-const EnvoyStakingKeepersInterface = artifacts.require("EnvoyStakingKeepersInterface");
+const CookerStaking = artifacts.require("CookerStaking");
+const CookerStakingKeepersInterface = artifacts.require("CookerStakingKeepersInterface");
 const TestToken = artifacts.require("TestToken");
 
 const truffleAssert = require('truffle-assertions');
@@ -55,7 +55,7 @@ contract("Withdrawing funds", function(accounts) {
 
         // Make sure contracts are deployed
         token = await TestToken.new();
-        contract = await EnvoyStaking.new(maxNumberOfPeriods_ = web3.utils.toBN(1095),
+        contract = await CookerStaking.new(maxNumberOfPeriods_ = web3.utils.toBN(1095),
             rewardPeriodDuration_ = web3.utils.toBN(86400),
             periodsForExtraReward_ = 182,
             extraRewardMultiplier_ = 10**6,
@@ -65,7 +65,7 @@ contract("Withdrawing funds", function(accounts) {
             // wallet_ = accounts[0],
             signatureAddress, token.address);        
 
-        keeperInterface = await EnvoyStakingKeepersInterface.new(contract.address)
+        keeperInterface = await CookerStakingKeepersInterface.new(contract.address)
 
         // Make sure the contract and accounts have funds
         stake = web3.utils.toBN(web3.utils.toWei('5000000000'))

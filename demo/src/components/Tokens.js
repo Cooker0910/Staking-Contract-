@@ -109,7 +109,7 @@ class Tokens extends Component{
             <div>
                 <button onClick={() => this.props.navigate('/main')}>Back to overview</button>
                 <div className='Title'>
-                    Envoy staking token
+                    Cooker staking token
                 </div>
                 <div className='Subtitle'>
                     Token info

@@ -1,16 +1,16 @@
 //SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import "./EnvoyStaking.sol";
+import "./CookerStaking.sol";
 
 /**
-* Wrapper contract to subscribe an EnvoyStaking contract to the Chainlink Keepers solution
+* Wrapper contract to subscribe an CookerStaking contract to the Chainlink Keepers solution
 */
-contract EnvoyStakingKeepersInterface{
-    EnvoyStaking stakingContract;
+contract CookerStakingKeepersInterface{
+    CookerStaking stakingContract;
 
     constructor(address stakingContractAddress){
-        stakingContract = EnvoyStaking(stakingContractAddress);
+        stakingContract = CookerStaking(stakingContractAddress);
     }
 
     function checkUpkeep(bytes calldata /* checkData */) public view returns (bool upkeepNeeded, bytes memory /* performData */){
